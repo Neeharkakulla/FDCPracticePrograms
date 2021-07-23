@@ -32,10 +32,10 @@ public class MorseCodeChecker
 //			inputCodes.put("msg", "--...--.");
 //			
 			
-			System.out.println("Wrong Input codes count "+getMorseCodeCount(map,inputCodes));
+			System.out.println("Wrong Input codes count "+getWrongMorseCodeCount(map,inputCodes));
 	}
 	
-	private static int getMorseCodeCount(Map<String, String> map, Map<String, String> inputCodes)
+	private static int getWrongMorseCodeCount(Map<String, String> map, Map<String, String> inputCodes)
 	{
 		int count=0;
 		for(Map.Entry<String, String> item:inputCodes.entrySet()) {
