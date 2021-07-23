@@ -1,10 +1,12 @@
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class MorseCodeChecker 
 {
 	public static void main(String[] args) 
 	{
+		Scanner in=new Scanner(System.in);
 		String morsecode[]= {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",
 			 ".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
 		
@@ -14,11 +16,17 @@ public class MorseCodeChecker
 			map.put(""+(char)(i+97), morsecode[i]);
 		
 			Map<String,String> inputCodes=new LinkedHashMap<>();
-			inputCodes.put("gin", "--...-.");
-			inputCodes.put("zen", "--...-.");
-			inputCodes.put("gig", "--...--.");
-			inputCodes.put("msg", "--...--.");
-			
+			System.out.println("Enter no. of inputs N");
+			int n=in.nextInt();
+			in.nextLine();
+			for(int i=0;i<n;i++) {
+			inputCodes.put(in.nextLine(), in.nextLine());
+			}
+//			inputCodes.put("gin", "--...-.");
+//			inputCodes.put("zen", "--...-.");
+//			inputCodes.put("gig", "--...--.");
+//			inputCodes.put("msg", "--...--.");
+//			
 			
 			System.out.println("Wrong Input codes count "+getMorseCodeCount(map,inputCodes));
 	}
