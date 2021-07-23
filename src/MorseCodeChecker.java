@@ -43,8 +43,8 @@ public class MorseCodeChecker
 			String conversionString="";
 			
 			for(int i=0;i<item.getKey().length();i++) 
-				conversionString+=map.get(""+item.getKey().charAt(i));
-			
+				conversionString+=map.get(""+item.getKey().toLowerCase().charAt(i));
+				
 			
 			if(!conversionString.equalsIgnoreCase(item.getValue())) {
 				System.out.println(item.getKey()+" "+item.getValue()+" is false");
