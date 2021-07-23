@@ -20,7 +20,11 @@ public class MorseCodeChecker
 			int n=in.nextInt();
 			in.nextLine();
 			for(int i=0;i<n;i++) {
-			inputCodes.put(in.nextLine(), in.nextLine());
+				System.out.println("Enter plain text");
+				String text=in.nextLine();
+				System.out.println("Enter morse code of "+text);
+				String code=in.nextLine();
+			inputCodes.put(text, code);
 			}
 //			inputCodes.put("gin", "--...-.");
 //			inputCodes.put("zen", "--...-.");
@@ -42,8 +46,14 @@ public class MorseCodeChecker
 				conversionString+=map.get(""+item.getKey().charAt(i));
 			
 			
-			if(!conversionString.equalsIgnoreCase(item.getValue()))
+			if(!conversionString.equalsIgnoreCase(item.getValue())) {
+				System.out.println(item.getKey()+" "+item.getValue()+" is false");
 				count++;
+			}
+			else
+			{
+				System.out.println(item.getKey()+" "+item.getValue()+" is true");
+			}
 		}
 		return count;
 	}
