@@ -35,22 +35,21 @@ public class MorseCodeCount {
 	{
 		int count=0;
 		Set<String> morsecodeStrings=new HashSet<>();
+		
 		for(String item:inputCodes) {
 			
 			String conversionString="";
 			
 			for(int i=0;i<item.length();i++) 
 				conversionString+=map.get(""+item.toLowerCase().charAt(i));
-				if(morsecodeStrings.size()==0)
-				{
-					morsecodeStrings.add(conversionString);
-				}
-			else if(!morsecodeStrings.contains(conversionString)) {
-				count+=count==0?2:1;
-				}
-			else {
+			
+			if(morsecodeStrings.size()==0)
 				morsecodeStrings.add(conversionString);
-			}
+			else if(!morsecodeStrings.contains(conversionString)) 
+				count+=count==0?2:1;
+			else 
+				morsecodeStrings.add(conversionString);
+			
 				
 			
 		}
