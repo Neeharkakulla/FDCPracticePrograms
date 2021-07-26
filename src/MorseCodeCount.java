@@ -51,7 +51,7 @@ public class MorseCodeCount {
 				
 			
 		}
-		return morsecodeStrings.size();
+		return morsecodeStrings.size()==1?0: morsecodeStrings.size();
 	}
 
 }
