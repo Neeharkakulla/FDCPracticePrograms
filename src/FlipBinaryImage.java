@@ -14,11 +14,16 @@ public class FlipBinaryImage {
 		for(int i=0;i<rows;i++) {
 			for(int j=0;j<cols;j++) {
 				int input=in.nextInt();
-				if(input!=0||input!=1) {
+			
+				if(input==0||input==1) {
+					arr[i][j]=input;
+					
+				}
+				else {
 					System.out.println("Invalid Input");
 					System.exit(-1);
 				}
-				arr[i][j]=input;
+				
 			}
 		}
 		System.out.println("Elements in the array");
