@@ -33,7 +33,7 @@ public class MorseCodeCount {
 	
 	private static int getDifferentTranformationsCount(Map<String, String> map, ArrayList<String> inputCodes)
 	{
-		int count=0;
+		
 		Set<String> morsecodeStrings=new HashSet<>();
 		
 		for(String item:inputCodes) {
@@ -43,17 +43,15 @@ public class MorseCodeCount {
 			for(int i=0;i<item.length();i++) 
 				conversionString+=map.get(""+item.toLowerCase().charAt(i));
 			
-			if(morsecodeStrings.size()==0)
+			
 				morsecodeStrings.add(conversionString);
-			else if(!morsecodeStrings.contains(conversionString)) 
-				count+=count==0?2:1;
-			else 
-				morsecodeStrings.add(conversionString);
+		
+				
 			
 				
 			
 		}
-		return count;
+		return morsecodeStrings.size();
 	}
 
 }
